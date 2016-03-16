@@ -32,6 +32,8 @@ public class PersonStoreServerSocket {
 				}
 				
 				store = new CSVDataReader("C:\\GIT\\javabigfinalassessment-lardehun\\Documentation\\persons.csv");
+				store.setSearchType(searchType);
+				store.setSearchCriteria(searchCriteria);
 				List<Person> persons = store.getPersons();
 				oos.writeObject(persons);
 				ois.close();
